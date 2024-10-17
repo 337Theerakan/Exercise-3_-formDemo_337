@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* กำหนดฟอนต์ */
+            background-color: #f4f4f4; /* สีพื้นหลัง */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333; /* สีหัวข้อ */
+            text-align: center; /* จัดกลางหัวข้อ */
+        }
+        form {
+            background: #fff; /* สีพื้นหลังของฟอร์ม */
+            padding: 20px; /* ขอบใน */
+            border-radius: 5px; /* มุมโค้ง */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงา */
+            max-width: 500px; /* กำหนดความกว้างสูงสุด */
+            margin: auto; /* จัดกลาง */
+        }
+        table {
+            width: 100%; /* ให้ตารางเต็มความกว้าง */
+            margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%; /* กำหนดความกว้างเต็ม */
+            padding: 10px; /* ระยะห่างภายใน */
+            border: 1px solid #ccc; /* สีขอบ */
+            border-radius: 5px; /* มุมโค้ง */
+            margin-top: 5px; /* ระยะห่างด้านบน */
+        }
+        input[type="submit"] {
+            background-color: #5cb85c; /* สีปุ่ม */
+            color: white; /* สีตัวอักษรในปุ่ม */
+            border: none; /* ไม่มีขอบ */
+            padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
+            border-radius: 5px; /* มุมโค้ง */
+            cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+            font-size: 16px; /* ขนาดตัวอักษร */
+            display: block; /* ให้ปุ่มอยู่แถวใหม่ */
+            margin: auto; /* จัดกลางปุ่ม */
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c; /* สีเมื่อชี้ไปที่ปุ่ม */
+        }
+    </style>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_p }} 
+        </table>
+        <br>
+        <input type="submit" value="Submit"> 
+    </form>
+</body>
+</html>
